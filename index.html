@@ -2,114 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Siva Krishna Karri, Senior Unity XR Developer with 9+ years of experience delivering production-ready VR/AR/MR & mobile applications.">
+  <meta name="keywords" content="Unity3D, XR, AR, VR, Mixed Reality, Meta Quest 3, HoloLens 2, C#, HLSL, Game Optimization, Game Development">
   <title>Siva Krishna Karri | Senior Unity XR Developer</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
+<div class="ambient-glow-left"></div>
+
+<!-- NAVIGATION -->
 <nav class="navbar">
-  <h2 class="logo">Siva XR</h2>
+  <a href="index.html" class="logo">
+    <i class="fa-solid fa-vr-cardboard"></i> Siva XR
+  </a>
   <ul class="nav-links">
     <li><a class="active" href="index.html">Home</a></li>
     <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Senior Unity3d XR Developer</h1>
+  <h1>Senior Unity3D XR Developer</h1>
   <p class="hero-sub">
-    9+ Years Experience • VR/AR/MR Development • Game Development • Mobile Apps
+    Designing spatial computing solutions <span>9+ Years Experience</span> <span>VR/AR/MR Architect</span> <span>C# Specialist</span>
   </p>
-  <a class="btn" href="projects.html">View Projects</a>
+  <div class="btn-group">
+    <a class="btn" href="projects.html">
+      <i class="fa-solid fa-circle-play"></i> View My Work
+    </a>
+    <a class="btn secondary" href="contact.html">
+      <i class="fa-solid fa-paper-plane"></i> Get in Touch
+    </a>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="container">
+<!-- MAIN CONTENT -->
+<main class="container">
 
-  <section class="card">
-    <h2>About Me</h2>
-    <p>
-      <b>Senior Unity3d XR Developer</b> with <b>9+ years</b> of experience
-      delivering production-ready XR, AR, VR, and mobile applications across
-      healthcare, aviation, military training, AR commerce, and gaming domains.
-      I specialize in performance optimization, scalable architecture, and
-      real-world XR deployments.
+  <!-- ABOUT SUMMARY -->
+  <section class="card" style="margin-bottom: 50px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+      <i class="fa-solid fa-user-astronaut" style="font-size: 24px; color: var(--accent-cyan);"></i>
+      <h2 style="margin: 0; color: var(--text-primary); font-size: 24px;">Executive Summary</h2>
+    </div>
+    <p style="font-size: 16px; margin-bottom: 0;">
+      A dedicated <b>Senior Unity3D XR Developer</b> with over <b>9 years</b> of industry experience designing, building, and deploying production-ready XR, AR, VR, and mobile applications. Specializing in highly scalable architectures, performance profiling, and graphics optimization across high-impact fields including healthcare simulators, defense modules, aerospace cabin crew training systems, and gaming.
     </p>
   </section>
 
-  <!-- IMPACT -->
-  <section>
-    <h2>Impact Highlights</h2>
-    <div class="card">
-      <ul class="highlight-list">
-        <li>Delivered <b>20+ enterprise XR applications</b></li>
-        <li>XR solutions used by <b>1,500+ users</b></li>
-        <li>Reduced training costs by <b>35%</b> using VR simulations</li>
-        <li>Improved performance by <b>25–30%</b></li>
-        <li>Led teams of <b>5+ developers</b> with 100% client approval</li>
-      </ul>
+  <!-- IMPACT STATS -->
+  <section style="margin-bottom: 60px;">
+    <div class="section-header">
+      <h2><i class="fa-solid fa-chart-line"></i> Proven Impact</h2>
+      <p>Driving quantifiable results across enterprise XR deployments and simulation software.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="fa-solid fa-cubes stat-icon"></i>
+        <div class="stat-value">20+</div>
+        <div class="stat-label">Enterprise Apps</div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-users stat-icon"></i>
+        <div class="stat-value">1,500+</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-percent stat-icon"></i>
+        <div class="stat-value">35%</div>
+        <div class="stat-label">Training Cost Cut</div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-gauge-high stat-icon"></i>
+        <div class="stat-value">30%</div>
+        <div class="stat-label">FPS Performance Gain</div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-people-group stat-icon"></i>
+        <div class="stat-value">5+</div>
+        <div class="stat-label">Engineers Led</div>
+      </div>
     </div>
   </section>
 
-  <!-- STACK -->
-  <section>
-    <h2>Technology Stack</h2>
+  <!-- TECH STACK GRID -->
+  <section style="margin-bottom: 60px;">
+    <div class="section-header">
+      <h2><i class="fa-solid fa-sliders"></i> Technology Ecosystem</h2>
+      <p>Deep expertise in developer toolsets, game engines, graphics pipelines, and spatial hardware APIs.</p>
+    </div>
     <div class="card grid-2">
-      <div>
-        <h3>XR / AR / VR</h3>
-        <p>Unity3D, OpenXR, XR Interaction Toolkit, MRTK, Oculus SDK</p>
+      <div class="tech-section">
+        <h3 class="tech-title"><i class="fa-solid fa-vr-cardboard"></i> XR Frameworks</h3>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fa-solid fa-code"></i> Unity3D</span>
+          <span class="tech-badge"><i class="fa-solid fa-network-wired"></i> OpenXR</span>
+          <span class="tech-badge"><i class="fa-solid fa-hand-pointer"></i> XR Interaction Toolkit</span>
+          <span class="tech-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> MRTK (Mixed Reality Toolkit)</span>
+          <span class="tech-badge"><i class="fa-solid fa-laptop-code"></i> Oculus/Meta SDK</span>
+          <span class="tech-badge"><i class="fa-solid fa-mobile-screen"></i> ARKit & ARCore</span>
+          <span class="tech-badge"><i class="fa-solid fa-camera"></i> Vuforia</span>
+        </div>
       </div>
-      <div>
-        <h3>Graphics</h3>
-        <p>HLSL, Shader Graph, Post-Processing</p>
+      <div class="tech-section">
+        <h3 class="tech-title"><i class="fa-solid fa-palette"></i> Graphics & Custom Shaders</h3>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fa-solid fa-fill-drip"></i> HLSL</span>
+          <span class="tech-badge"><i class="fa-solid fa-diagram-project"></i> Shader Graph</span>
+          <span class="tech-badge"><i class="fa-solid fa-sparkles"></i> VFX Graph / Particles</span>
+          <span class="tech-badge"><i class="fa-solid fa-wand-magic"></i> Post-Processing Pipelines</span>
+          <span class="tech-badge"><i class="fa-solid fa-lightbulb"></i> Universal Render Pipeline (URP)</span>
+        </div>
       </div>
-      <div>
-        <h3>Performance</h3>
-        <p>Unity Profiler, GPU Instancing, Texture Atlasing</p>
+      <div class="tech-section">
+        <h3 class="tech-title"><i class="fa-solid fa-bolt"></i> Profiling & Performance</h3>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fa-solid fa-chart-area"></i> Unity Profiler & Frame Debugger</span>
+          <span class="tech-badge"><i class="fa-solid fa-microchip"></i> GPU Instancing</span>
+          <span class="tech-badge"><i class="fa-solid fa-images"></i> Dynamic Texture Atlasing</span>
+          <span class="tech-badge"><i class="fa-solid fa-memory"></i> Memory & Garbage Collection Tuning</span>
+          <span class="tech-badge"><i class="fa-solid fa-arrows-spin"></i> Draw Call Reduction</span>
+        </div>
       </div>
-      <div>
-        <h3>Programming</h3>
-        <p>C#, React Native, TypeScript</p>
+      <div class="tech-section">
+        <h3 class="tech-title"><i class="fa-solid fa-terminal"></i> Languages & Platforms</h3>
+        <div class="tech-badges">
+          <span class="tech-badge"><i class="fa-solid fa-hashtag"></i> C# (Unity scripting)</span>
+          <span class="tech-badge"><i class="fa-brands fa-react"></i> React Native</span>
+          <span class="tech-badge"><i class="fa-brands fa-js"></i> TypeScript / JavaScript</span>
+          <span class="tech-badge"><i class="fa-solid fa-headset"></i> Meta Quest 2/3 / HoloLens 2</span>
+          <span class="tech-badge"><i class="fa-brands fa-apple"></i> iOS / Android / Windows / macOS</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- DOMAINS -->
-  <section>
-    <h2>Domains & Platforms</h2>
-    <div class="card">
-      <p>
-        <b>Domains:</b> Healthcare, Aviation, Defense, AR Commerce, Games<br><br>
-        <b>Platforms:</b> Meta Quest 2/3, HoloLens 2, Android, iOS, Windows
-      </p>
-    </div>
-  </section>
+  <!-- DOMAINS & LEADERSHIP GRID -->
+  <div class="grid-2" style="margin-bottom: 60px;">
+    <!-- DOMAINS -->
+    <section class="card">
+      <h3 style="margin-bottom: 20px; color: var(--accent-cyan); display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-globe"></i> Specialized Domains
+      </h3>
+      <div class="domain-container">
+        <div class="domain-item">
+          <div class="domain-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="domain-content">
+            <h4>Healthcare & Medical VR</h4>
+            <p>Immersive simulators for surgical, therapeutic, and interactive clinic environments.</p>
+          </div>
+        </div>
+        <div class="domain-item">
+          <div class="domain-icon"><i class="fa-solid fa-plane"></i></div>
+          <div class="domain-content">
+            <h4>Aviation & Aerospace Training</h4>
+            <p>Full-scale cabin simulators mapping out emergency checklists and safety protocols.</p>
+          </div>
+        </div>
+        <div class="domain-item">
+          <div class="domain-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="domain-content">
+            <h4>Defense & Military Simulation</h4>
+            <p>Tactical trainer scenarios focusing on awareness, physics calculation, and terrain loads.</p>
+          </div>
+        </div>
+        <div class="domain-item">
+          <div class="domain-icon"><i class="fa-solid fa-shirt"></i></div>
+          <div class="domain-content">
+            <h4>AR Commerce & Try-On</h4>
+            <p>Real-time accessory and beauty try-ons leveraging high-fidelity body tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- LEADERSHIP -->
-  <section>
-    <h2>Leadership & Ownership</h2>
-    <div class="card">
+    <!-- LEADERSHIP -->
+    <section class="card">
+      <h3 style="margin-bottom: 20px; color: var(--accent-cyan); display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-user-shield"></i> Leadership & Ownership
+      </h3>
       <ul class="highlight-list">
-        <li>Owned XR architecture and delivery pipelines</li>
-        <li>Primary client-facing engineer</li>
-        <li>Reduced delivery timelines by 25%</li>
-        <li>Mentored junior developers</li>
+        <li><b>Architecture & Ownership</b>: Controlled the design of reusable systems and performance pipelines for enterprise-grade applications.</li>
+        <li><b>Client-Facing Leadership</b>: Acted as primary developer representing code structure during sprint reviews, QA pipelines, and releases.</li>
+        <li><b>Sprint Delivery</b>: Enhanced planning structures, lowering overall release cycle timeline metrics by 25%.</li>
+        <li><b>Mentoring</b>: Managed junior engineering streams, setting coding practices, pull request workflows, and profile reviews.</li>
       </ul>
-    </div>
+    </section>
+  </div>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta-box">
+    <h2>Want to inspect the immersive work?</h2>
+    <p>Check out detailed project descriptions, technical breakdowns, metrics, and video demos of real-world XR products.</p>
+    <a class="btn" href="projects.html">
+      <i class="fa-solid fa-photo-film"></i> Explore Projects
+    </a>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Want to See Real XR Work?</h2>
-    <a class="btn" href="projects.html">Explore Projects</a>
-  </section>
+</main>
 
-</section>
-
+<!-- FOOTER -->
 <footer class="footer">
+  <div class="footer-socials">
+    <!-- Replace '#' with your personal links once ready -->
+    <a href="contact.html" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  </div>
   <p>© 2026 Siva Krishna Karri • Senior Unity XR Developer</p>
 </footer>
 

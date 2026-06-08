@@ -2,156 +2,268 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects portfolio of Siva Krishna Karri, showcasing enterprise VR/AR/MR, training simulations, and high-performance Unity3D software applications.">
   <title>Projects | Siva Krishna Karri</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline transitions for category filtering */
+    .project-card {
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.4s ease;
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
+<div class="ambient-glow-left"></div>
+
+<!-- NAVIGATION -->
 <nav class="navbar">
-  <h2 class="logo">Siva XR</h2>
+  <a href="index.html" class="logo">
+    <i class="fa-solid fa-vr-cardboard"></i> Siva XR
+  </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
     <li><a class="active" href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <!-- PAGE HEADER -->
-<section class="page-header">
-  <h1>Projects & Achievements</h1>
+<header class="page-header">
+  <h1>Projects & Case Studies</h1>
   <p class="subtitle">
-    Real-world XR, AR, VR, and Mobile applications delivered across healthcare,
-    aviation, defense, AR commerce, and gaming domains.
+    Deploying industry-grade Virtual Reality, Augmented Reality, and Simulation applications across mission-critical domains.
   </p>
-</section>
+</header>
 
-<!-- PROJECTS GRID -->
-<section class="projects-container">
+<!-- PROJECTS MAIN CONTAINER -->
+<main class="container" style="padding-top: 0;">
 
-  <!-- Project 1 -->
-  <div class="project-card featured">
-    <div class="project-header">
-      <h3>Relversiv VR Therapy Platform</h3>
-      <span class="tag">Healthcare • VR</span>
-    </div>
-
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/kSXS28j_Dms"
-        title="Relversiv VR Therapy Platform Demo"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <p>
-      Led development of a VR-based chronic pain relief platform with guided
-      therapeutic exercises and immersive environments.
-    </p>
-    <ul>
-      <li>Adopted by <b>1,000+ users</b></li>
-      <li>Built using Unity XR & Meta Quest</li>
-      <li>Focused on comfort, performance, and usability</li>
-    </ul>
+  <!-- FILTER CONTROLS -->
+  <div class="filter-container">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="vr"><i class="fa-solid fa-headset"></i> Virtual Reality</button>
+    <button class="filter-btn" data-filter="ar"><i class="fa-solid fa-mobile-screen-button"></i> Augmented Reality</button>
+    <button class="filter-btn" data-filter="games"><i class="fa-solid fa-gamepad"></i> Games & Sims</button>
+    <button class="filter-btn" data-filter="mobile"><i class="fa-solid fa-mobile"></i> Mobile Apps</button>
   </div>
 
-  <!-- Project 2 -->
-  <div class="project-card featured">
-    <div class="project-header">
-      <h3>Aviation Cabin Crew Training VR</h3>
-      <span class="tag">Aviation • VR</span>
+  <!-- PROJECTS GRID -->
+  <div class="projects-grid">
+  
+    <!-- Project 1: Aviation Cabin Crew VR -->
+    <div class="project-card featured" data-category="vr">
+      <div class="project-header">
+        <div>
+          <span class="tag">Aviation • VR</span>
+          <h3 style="margin-top: 8px;">Aviation Cabin Crew Training VR</h3>
+        </div>
+        <span class="tag" style="background: rgba(79, 172, 254, 0.08); color: var(--accent-blue); border-color: rgba(79, 172, 254, 0.2);">Featured</span>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/PdxB_EFY2oM"
+          title="Aviation Cabin Crew Training VR Demo"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="project-desc">
+        Engineered interactive emergency checklists, spatial hazard models, and flight deck inspection layouts for aviation staff. Provides immersive training for emergency egress, cabin fires, and turbulence safety.
+      </p>
+      <ul>
+        <li><b>Business Impact</b>: Reduced raw crew training material and facility rental overhead by <b>35%</b>.</li>
+        <li><b>Scale</b>: Utilized by <b>500+ aviation professionals</b> in active onboarding programs.</li>
+        <li><b>Development</b>: Built a customized event-driven interaction framework in C# using the Unity XR Toolkit.</li>
+      </ul>
     </div>
 
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/PdxB_EFY2oM"
-        title="Aviation Cabin Crew Training VR Demo"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+    <!-- Project 2: Relversiv VR -->
+    <div class="project-card featured" data-category="vr">
+      <div class="project-header">
+        <div>
+          <span class="tag">Healthcare • VR</span>
+          <h3 style="margin-top: 8px;">Relversiv VR Therapy Platform</h3>
+        </div>
+        <span class="tag" style="background: rgba(79, 172, 254, 0.08); color: var(--accent-blue); border-color: rgba(79, 172, 254, 0.2);">Featured</span>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/kSXS28j_Dms"
+          title="Relversiv VR Therapy Platform Demo"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="project-desc">
+        Architected and led the development of a medical-grade Virtual Reality therapeutic environment designed to assist in chronic pain management. Replaces heavy drug protocols with guided immersive sessions, visual biofeedback triggers, and fully interactive tasks.
+      </p>
+      <ul>
+        <li><b>Enterprise Scale</b>: Successfully adopted and deployed for <b>1,000+ therapeutic users</b>.</li>
+        <li><b>Hardware</b>: Formulated and optimized code layouts for standalone <b>Meta Quest 2 & Quest 3</b> headsets.</li>
+        <li><b>Key Metrics</b>: Reduced visual frame stuttering to maintain a strict, comfortable <b>90 FPS</b> target, keeping motion sickness rates below 1%.</li>
+      </ul>
     </div>
 
-    <ul>
-      <li>Realistic VR safety & emergency training modules</li>
-      <li>Reduced training costs by <b>35%</b></li>
-      <li>Used by <b>500+ aviation professionals</b></li>
-    </ul>
+    <!-- Project 3: Olivia VR -->
+    <div class="project-card" data-category="vr">
+      <div class="project-header">
+        <div>
+          <span class="tag">Healthcare • VR</span>
+          <h3 style="margin-top: 8px;">Olivia VR – Hair Removal Training</h3>
+        </div>
+      </div>
+      <p class="project-desc">
+        An interactive clinical training tool simulating professional medical and laser hair removal techniques. Focuses on procedural steps, patient safety routines, and clinical equipment interaction in virtual environments.
+      </p>
+      <ul>
+        <li>Developed step-by-step evaluation checks mapping user actions against standard medical checklists.</li>
+        <li>Programmed a dynamic particle-based laser collision shader using Unity Shader Graph.</li>
+        <li>Built cross-platform support targeting standalone Meta Quest and PC VR configurations.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4: Find The Sniper -->
+    <div class="project-card" data-category="games">
+      <div class="project-header">
+        <div>
+          <span class="tag">Defense • Simulation</span>
+          <h3 style="margin-top: 8px;">Find The Sniper – Military Training</h3>
+        </div>
+      </div>
+      <p class="project-desc">
+        A tactical reconnaissance simulation designed for military training programs. Focuses on spatial sound mapping, sniper detection, and terrain recognition in heavily loaded urban, dense forest, and hilly maps.
+      </p>
+      <ul>
+        <li>Leveraged spatial 3D audio rendering algorithms to simulate realistic long-range ballistics sounds.</li>
+        <li>Optimized LOD systems and terrain loading routines to handle complex 3D foliage assets smoothly.</li>
+        <li>Integrated specialized scoring APIs to record accuracy and reaction performance.</li>
+      </ul>
+    </div>
+
+    <!-- Project 5: AR Try-On -->
+    <div class="project-card" data-category="ar">
+      <div class="project-header">
+        <div>
+          <span class="tag">AR • Commerce</span>
+          <h3 style="margin-top: 8px;">AR Fashion & Beauty Virtual Try-On</h3>
+        </div>
+      </div>
+      <p class="project-desc">
+        High-performance Augmented Reality platform allowing customers to perform virtual face and body try-ons. Supports accessories like glasses and beauty products including lipsticks, eyeliners, and eyeshadows.
+      </p>
+      <ul>
+        <li>Configured multi-point facial tracking nodes utilizing ARKit and ARCore pipelines.</li>
+        <li>Wrote custom HLSL rendering shaders to mimic real-world lighting and reflections on glass lenses.</li>
+        <li>Maintained low execution cycles on mid-range Android and iOS devices.</li>
+      </ul>
+    </div>
+
+    <!-- Project 6: Unity3D Games -->
+    <div class="project-card" data-category="games">
+      <div class="project-header">
+        <div>
+          <span class="tag">Games • Simulation</span>
+          <h3 style="margin-top: 8px;">Unity3D Games & Simulations</h3>
+        </div>
+      </div>
+      <p class="project-desc">
+        Successfully launched multiple commercial mobile titles, including <i>Ultimate Bike Stunts 3D</i>, <i>Real Car Driving Simulator</i>, <i>San Andreas American Gangster 3D</i>, and <i>Bowmen 3D</i>.
+      </p>
+      <ul>
+        <li>Programmed core gameplay, custom physics solvers, and advanced artificial intelligence patterns.</li>
+        <li>Engineered local and network multiplayer features using Photon PUN2.</li>
+        <li>Optimized build size and asset packaging to support low-end mobile devices.</li>
+      </ul>
+    </div>
+
+    <!-- Project 7: Finance Calculators -->
+    <div class="project-card" data-category="mobile">
+      <div class="project-header">
+        <div>
+          <span class="tag">Mobile • React Native</span>
+          <h3 style="margin-top: 8px;">Finance Calculators</h3>
+        </div>
+      </div>
+      <p class="project-desc">
+        A utility-heavy mobile application for calculating investment schedules, EMI loans, SIP yields, and compound interest calculations.
+      </p>
+      <ul>
+        <li>Created a clean, high-performance UI using React Native and TypeScript.</li>
+        <li>Structured fast computational algorithms with immediate state refreshing.</li>
+        <li>Achieved 99.9% crash-free sessions across Android and iOS deployments.</li>
+      </ul>
+    </div>
+
   </div>
 
-  <!-- Project 3 -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>Olivia VR – Hair Removal Training</h3>
-      <span class="tag">Healthcare • VR</span>
-    </div>
-    <ul>
-      <li>Professional treatment simulation & training tool</li>
-      <li>Immersive 3D clinical environments</li>
-      <li>Step-by-step treatment guidance & safety protocols</li>
-    </ul>
-  </div>
+</main>
 
-  <!-- Project 4 -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>Find The Sniper – Military Training</h3>
-      <span class="tag">Defense • Simulation</span>
-    </div>
-    <ul>
-      <li>Sniper detection training for military professionals</li>
-      <li>Urban, forest, and terrain-based scenarios</li>
-      <li>Focused on situational awareness & decision making</li>
-    </ul>
-  </div>
-
-  <!-- Project 5 -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>AR Fashion & Beauty Virtual Try-On</h3>
-      <span class="tag">AR • Commerce</span>
-    </div>
-    <ul>
-      <li>Real-time AR try-on for clothing & accessories</li>
-      <li>Beauty products: lipstick, eyeliner, kajal</li>
-      <li>High-accuracy face & body tracking</li>
-    </ul>
-  </div>
-
-  <!-- Project 6 -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>Unity3D Games & Simulations</h3>
-      <span class="tag">Games • Simulation</span>
-    </div>
-    <ul>
-      <li>Ultimate Bike Stunts 3D, Real Car Driving Simulator</li>
-      <li>San Andreas American Gangster 3D, Bowmen 3D</li>
-      <li>Gameplay, physics, AI, UI/UX, multiplayer & optimization</li>
-    </ul>
-  </div>
-
-  <!-- Project 7 -->
-  <div class="project-card">
-    <div class="project-header">
-      <h3>Finance Calculators – React Native App</h3>
-      <span class="tag">Mobile • React Native</span>
-    </div>
-    <ul>
-      <li>EMI, SIP, and investment calculators</li>
-      <li>Cross-platform mobile application</li>
-      <li>Focused on performance & usability</li>
-    </ul>
-  </div>
-
-</section>
-
+<!-- FOOTER -->
 <footer class="footer">
+  <div class="footer-socials">
+    <a href="contact.html" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  </div>
   <p>© 2026 Siva Krishna Karri • Senior Unity XR Developer</p>
 </footer>
+
+<!-- FILTER SCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle Active Class on Button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+
+          if (filter === 'all' || category === filter) {
+            // Show Card
+            card.style.display = 'flex';
+            // Trigger animation thread
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            // Hide Card with scale/fade animation
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

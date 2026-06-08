@@ -1,34 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact | Siva Krishna</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Siva Krishna Karri, Senior Unity XR Developer. Get in touch for project requests, engineering audits, or collaboration.">
+  <title>Contact | Siva Krishna Karri</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Toast styles for form confirmation */
+    .toast-message {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(0, 242, 254, 0.15);
+      border: 1px solid var(--accent-cyan);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--text-primary);
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg), var(--glow-shadow);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .toast-message.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
 
-<nav>
-  <h2>Siva XR</h2>
-  <ul>
+<div class="ambient-glow-left"></div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <a href="index.html" class="logo">
+    <i class="fa-solid fa-vr-cardboard"></i> Siva XR
+  </a>
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
     <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<section class="content">
-  <h1>Contact</h1>
-  <p>Email: <b>siva.unity3d@gmail.com</b></p>
-  <p>LinkedIn: <b>Add your LinkedIn URL</b></p>
-  <p>GitHub: <b>github.com/yourusername</b></p>
+<!-- MAIN CONTENT -->
+<main class="container">
 
-  <a class="btn" href="assets/Siva_Krishna_Resume.pdf">Download Resume</a>
-</section>
+  <!-- PAGE HEADER -->
+  <header class="page-header" style="margin-bottom: 60px;">
+    <h1>Get in Touch</h1>
+    <p class="subtitle">Looking to build an immersive product, optimize a VR application, or discuss contract/full-time opportunities?</p>
+  </header>
 
-<footer>
-  <p>© 2026 Siva Krishna Karri</p>
+  <!-- CONTACT GRID -->
+  <div class="contact-grid">
+  
+    <!-- Contact Info Tiles -->
+    <div class="contact-tiles">
+      <!-- Email Tile -->
+      <a href="mailto:siva.unity3d@gmail.com" class="contact-tile">
+        <div class="contact-tile-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="contact-tile-details">
+          <h4>Email Address</h4>
+          <p>siva.unity3d@gmail.com</p>
+        </div>
+      </a>
+
+      <!-- LinkedIn Tile -->
+      <!-- Replace '#' with your LinkedIn link once ready -->
+      <a href="#" target="_blank" class="contact-tile" id="linkedin-tile">
+        <div class="contact-tile-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <div class="contact-tile-details">
+          <h4>LinkedIn Profile</h4>
+          <p>Connect on LinkedIn</p>
+        </div>
+      </a>
+
+      <!-- GitHub Tile -->
+      <!-- Replace '#' with your GitHub link once ready -->
+      <a href="#" target="_blank" class="contact-tile" id="github-tile">
+        <div class="contact-tile-icon">
+          <i class="fa-brands fa-github"></i>
+        </div>
+        <div class="contact-tile-details">
+          <h4>GitHub Account</h4>
+          <p>Inspect Repository Code</p>
+        </div>
+      </a>
+
+      <!-- Location Tile -->
+      <div class="contact-tile" style="cursor: default;">
+        <div class="contact-tile-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="contact-tile-details">
+          <h4>Geographic Location</h4>
+          <p>India (Open to Remote / Relocation)</p>
+        </div>
+      </div>
+
+      <!-- Resume Download Tile -->
+      <a href="Siva_Krishna_Karri_Resume.pdf" target="_blank" class="contact-tile">
+        <div class="contact-tile-icon">
+          <i class="fa-solid fa-file-pdf"></i>
+        </div>
+        <div class="contact-tile-details">
+          <h4>Professional Resume</h4>
+          <p>Download PDF Document (94 KB)</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Contact Form Card -->
+    <div class="card contact-form-card">
+      <h3 style="margin-bottom: 24px; color: var(--text-primary); font-size: 20px;">Send a Secure Message</h3>
+      
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" class="form-control" placeholder="e.g. John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="e.g. john@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-control" placeholder="e.g. Project Consultation" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Detailed Message</label>
+          <textarea id="message" class="form-control" placeholder="Describe your project, timeline, or inquiries..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="contact.html" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  </div>
+  <p>© 2026 Siva Krishna Karri • Senior Unity XR Developer</p>
 </footer>
+
+<!-- Toast notification box -->
+<div id="toast" class="toast-message">
+  <i class="fa-solid fa-circle-check" style="font-size: 20px; color: var(--accent-cyan);"></i>
+  <div>
+    <strong style="display: block; margin-bottom: 2px;">Message Received!</strong>
+    <span style="font-size: 13px; color: var(--text-secondary);">I will respond to you as soon as possible.</span>
+  </div>
+</div>
+
+<!-- FORM JS -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simulate submission loading
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    setTimeout(() => {
+      // Show Success Toast
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      
+      // Reset Form fields
+      document.getElementById('contactForm').reset();
+      
+      // Reset Button
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+
+      // Hide toast after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }, 1200);
+  });
+</script>
 
 </body>
 </html>
-
