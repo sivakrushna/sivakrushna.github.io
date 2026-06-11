@@ -175,18 +175,6 @@ const Projects = () => {
           <div 
             key={project.id} 
             className={`project-card ${project.featured ? 'featured' : ''}`}
-            style={{
-              background: 'var(--bg-card)',
-              backdropFilter: 'blur(16px)',
-              border: '1px solid var(--border-color)',
-              borderRadius: '16px',
-              padding: '24px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '16px',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)'
-            }}
           >
             <div className="project-header">
               <h3 style={{ fontSize: '20px', fontWeight: 600, color: '#ffffff' }}>{project.title}</h3>
