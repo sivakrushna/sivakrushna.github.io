@@ -191,7 +191,7 @@ const Projects = () => {
                     loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  />
+                  ></iframe>
                 ) : (
                   <video src={project.videoSrc} controls preload="metadata" loop muted playsInline />
                 )}
