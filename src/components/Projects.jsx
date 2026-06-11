@@ -176,54 +176,85 @@ const Projects = () => {
             key={project.id} 
             className={`project-card ${project.featured ? 'featured' : ''}`}
           >
-            <div className="project-header">
-              <h3 style={{ fontSize: '20px', fontWeight: 600, color: '#ffffff' }}>{project.title}</h3>
-              <span className="tag">{project.tag}</span>
-            </div>
-
-            {/* VIDEO PLAYER (If featured) */}
-            {project.featured && (
-              <div className="video-wrapper">
-                {project.videoType === 'youtube' ? (
-                  <iframe
-                    src={project.videoSrc}
-                    title={project.title}
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                ) : (
-                  <video src={project.videoSrc} controls preload="metadata" loop muted playsInline />
+            {project.featured ? (
+              <div className="featured-grid">
+                <div className="featured-video-pane">
+                  <div className="video-wrapper">
+                    {project.videoType === 'youtube' ? (
+                      <iframe
+                        src={project.videoSrc}
+                        title={project.title}
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    ) : (
+                      <video src={project.videoSrc} controls preload="metadata" loop muted playsInline />
+                    )}
+                  </div>
+                </div>
+                <div className="featured-info-pane">
+                  <div className="project-header" style={{ marginBottom: '12px' }}>
+                    <h3 style={{ fontSize: '22px', fontWeight: 600, color: '#ffffff' }}>{project.title}</h3>
+                    <span className="tag">{project.tag}</span>
+                  </div>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '14.5px', marginBottom: '16px' }}>{project.desc}</p>
+                  <ul className="highlight-list" style={{ marginBottom: '16px' }}>
+                    {project.bullets.map((bullet, idx) => (
+                      <li key={idx} style={{ fontSize: '14px', marginBottom: '6px' }}>{bullet}</li>
+                    ))}
+                  </ul>
+                  {project.link && (
+                    <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="btn" 
+                        style={{
+                          padding: '8px 16px',
+                          fontSize: '13px',
+                          borderRadius: '8px',
+                          width: 'fit-content'
+                        }}
+                      >
+                        Play on Store <ExternalLink size={14} />
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="project-header">
+                  <h3 style={{ fontSize: '20px', fontWeight: 600, color: '#ffffff' }}>{project.title}</h3>
+                  <span className="tag">{project.tag}</span>
+                </div>
+                <p style={{ color: 'var(--text-muted)', fontSize: '14px' }}>{project.desc}</p>
+                <ul className="highlight-list">
+                  {project.bullets.map((bullet, idx) => (
+                    <li key={idx} style={{ fontSize: '13.5px', marginBottom: '4px' }}>{bullet}</li>
+                  ))}
+                </ul>
+                {project.link && (
+                  <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn" 
+                      style={{
+                        padding: '8px 16px',
+                        fontSize: '13px',
+                        borderRadius: '8px',
+                        width: 'fit-content'
+                      }}
+                    >
+                      Play on Store <ExternalLink size={14} />
+                    </a>
+                  </div>
                 )}
-              </div>
-            )}
-
-            <p style={{ color: 'var(--text-muted)', fontSize: '14px' }}>{project.desc}</p>
-            
-            <ul className="highlight-list">
-              {project.bullets.map((bullet, idx) => (
-                <li key={idx} style={{ fontSize: '13.5px', marginBottom: '4px' }}>{bullet}</li>
-              ))}
-            </ul>
-
-            {/* EXTERNAL PLAY LINK (If exists) */}
-            {project.link && (
-              <div style={{ marginTop: 'auto', paddingTop: '12px' }}>
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn" 
-                  style={{
-                    padding: '8px 16px',
-                    fontSize: '13px',
-                    borderRadius: '8px',
-                    width: 'fit-content'
-                  }}
-                >
-                  Play on Store <ExternalLink size={14} />
-                </a>
-              </div>
+              </>
             )}
           </div>
         ))}
