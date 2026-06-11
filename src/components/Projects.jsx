@@ -9,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: 'Aviation Cabin Crew Training VR',
       category: 'xr',
-      tag: 'Aviation • VR',
+      tag: 'Aviation • Virtual Reality',
       featured: true,
       videoType: 'youtube',
       videoSrc: 'https://www.youtube.com/embed/PdxB_EFY2oM',
