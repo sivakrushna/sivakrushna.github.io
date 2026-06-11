@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "powershell -Command \"Copy-Item -Path index.template.html -Destination index.html -Force\" && vite",
+    "build": "powershell -Command \"Copy-Item -Path index.template.html -Destination index.html -Force\" && vite build",
     "preview": "vite preview",
     "deploy": "npm run build && powershell -Command \"Copy-Item -Path dist/* -Destination . -Recurse -Force\""
   },
